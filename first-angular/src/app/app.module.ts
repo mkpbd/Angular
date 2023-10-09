@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { TestAppComponent } from 'src/components/test/test.component';
 import { TemplateComponent } from 'src/components/tem-com/tem.com.component';
-import {StandaloneComponent} from 'src/components/tem-com/standalone.component'
+import {StandaloneComponent} from 'src/components/tem-com/standalone.component';
+import{RacesComponent} from 'src/components/stanadalone/races.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {StandaloneComponent} from 'src/components/tem-com/standalone.component'
   imports: [
     BrowserModule, 
     TemplateComponent,
-    StandaloneComponent
+    StandaloneComponent,
+    RacesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

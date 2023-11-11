@@ -1,0 +1,6 @@
+export function bet(race, pony) {
+  // ...
+}
+export function start(race) {
+  // ...
+}

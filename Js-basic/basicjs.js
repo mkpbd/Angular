@@ -70,14 +70,14 @@ function createPony3() {
   };
 }
 
-// Destructuring assignment 
+// Destructuring assignment
 
 var httpOptions = { timeout: 2000, isCache: true };
 // later
 var httpTimeout = httpOptions.timeout;
 var httpCache = httpOptions.isCache;
 
-// Now, in ES2015, you can do: 
+// Now, in ES2015, you can do:
 
 const httpOptions1 = { timeout: 2000, isCache: true };
 // later
@@ -87,6 +87,57 @@ const { timeout: httpTimeout, isCache: httpCache } = httpOptions1;
 const httpOptions3 = { timeout: 2000, cache: { age: 2 } };
 // later
 const {
-cache: { age }
+  cache: { age },
 } = httpOptions3;
 // you now have a variable named 'age' with value 2
+
+function randomPonyInRace() {
+  const pony = { name: "Rainbow Dash" };
+  const position = 2;
+  // ...
+  return { pony, position };
+}
+const { position, pony } = randomPonyInRace();
+
+// Default parameters and values
+
+function getPonies(size, page) {
+  size = size || 10;
+  page = page || 1;
+  // ...
+  server.get(size, page);
+}
+
+getPonies(20, 2);
+getPonies(); // same as getPonies(10, 1);
+getPonies(15); // same as getPonies(15, 1);
+
+function getPonies1(size = 10, page = 1) {
+  // ...
+  server.get(size, page);
+}
+
+//  Rest operator
+
+function addPonies3(ponies) {
+  for (var i = 0; i < arguments.length; i++) {
+    poniesInRace.push(arguments[i]);
+  }
+}
+addPonies3("Rainbow Dash", "Pinkie Pie");
+
+// ES2015 gives us a way better syntax, using the rest operator …
+
+function addPonies4(...ponies) {
+  for (let pony of ponies) {
+    poniesInRace.push(pony);
+  }
+}
+
+// The rest operator can also work when destructuring data:
+const [winner1, ...losers] = poniesInRace;
+// assuming 'poniesInRace' is an array containing several ponies
+// 'winner' will have the first pony,
+// and 'losers' will be an array of the other ones
+
+

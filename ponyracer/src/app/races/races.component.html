@@ -1,0 +1,20 @@
+<p>races works!</p>
+
+<button (click)="refreshRaces()">Refresh the races list</button>
+<p>{{ races.length }} races</p>
+
+<div (click)="onButtonClick($event)">
+  <button>Click me!</button>
+</div>
+
+<input placeholder="abc" type="text" #name>
+<button (click)="name.focus()">Focus the input</button>
+
+<ng-template>
+    <div>races List</div>
+</ng-template>
+
+<ng-template [ngIf]="races.length > 0">
+    <div> <h2 style="color: blue;"> Race template is show now</h2></div>
+
+</ng-template>

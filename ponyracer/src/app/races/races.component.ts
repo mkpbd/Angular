@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
  import { RaceComponent } from '../race/race.component';
+ import {DoNothingDirective} from '../diractives/do-nothing.directive';
 @Component({
   selector: 'ns-races',
   standalone: true,
-  imports: [CommonModule, RaceComponent],
+  imports: [CommonModule, RaceComponent, DoNothingDirective],
   templateUrl: './races.component.html',
   styleUrl: './races.component.css'
 })

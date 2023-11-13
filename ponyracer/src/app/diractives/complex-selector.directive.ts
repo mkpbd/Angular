@@ -1,11 +1,13 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[nsComplexSelector]',
+  selector: 'div.loggable[logText]:not([notLoggable=true])',
   standalone: true
 })
 export class ComplexSelectorDirective {
 
-  constructor() { }
+  constructor() { 
+    console.log('complex selector directive ')
+  }
 
 }

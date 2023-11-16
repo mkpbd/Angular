@@ -1,3 +1,7 @@
 <p>pony works!</p>
 
     <p *ngFor="let p of ponies"> {{p.name}} - {{p.age}} - {{p.id}}</p>
+    
+    @for( p of ponies; track $index){
+        <p>{{p.name}}</p>
+    }

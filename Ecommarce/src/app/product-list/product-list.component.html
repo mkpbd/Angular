@@ -1,0 +1,26 @@
+<p>product list</p>
+<img [src]="product.image" alt="">
+<img bind-src="product.image" alt="">
+<ul>
+    <li> {{product.name}} </li>
+    <li> {{product.color}}</li>
+    <li> {{product.price}}</li>
+    
+</ul>
+<input placeholder="entry your name" type="text" [value]="name">
+<input placeholder="entry your name" type="text" bind-value="name">
+
+<input (input) = "onInputChange($event)" placeholder="dd" type="text">
+
+
+<button (click)="incrementNumber()" >add</button>
+{{number}}
+<button (click)="decrmentNumber()"> - </button>
+
+
+<div *ngFor="let number of [3,45,6,7,8,9,12]"></div>
+
+@for(number of [3,45,6,7,8,9,12]; track $index){
+    <li>{{number}}</li>
+}
+

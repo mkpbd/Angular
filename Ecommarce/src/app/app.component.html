@@ -1,0 +1,17 @@
+<h2>app  components </h2>
+
+
+<button (click)="postDataInApi()">Send POST Request</button>
+
+
+<button (click)="getWetherData()"> Wether Data </button>
+<button (click)="postWetherData('kamal')"> Post Data </button>
+
+ <!-- @if(wetherData.length > 0){ -->
+  @for(data of wetherData; track $index){
+    <li> {{data.date}}  {{data.temperatureC}}  {{data.summary}} </li>
+}
+
+ <!-- } @else {
+   <h3>No data found</h3>
+ } -->

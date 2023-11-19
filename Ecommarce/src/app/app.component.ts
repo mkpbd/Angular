@@ -5,11 +5,11 @@ import{ProductListComponent} from './product-list//product-list.component';
 import{WeatherDataService} from './weatherservice/weather-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DemoService } from './Demoservice/demo.service';
-
+import{SimpleformComponent} from './simpleform/simpleform.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,ProductListComponent,HttpClientModule],
+  imports: [CommonModule, RouterOutlet,ProductListComponent,HttpClientModule,SimpleformComponent],
   providers: [WeatherDataService, DemoService],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

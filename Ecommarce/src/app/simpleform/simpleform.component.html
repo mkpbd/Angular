@@ -1,0 +1,9 @@
+<form method="get" action="">
+  <label for="firstName">First Name: </label>
+  <input id="firstName" type="text" name="firstName" [formControl]="firstName">
+  <label for="lastName">Last name</label>
+  <input id="lastName" class="form-control" type="text" name="lastName" [formControl]="lastName">
+  <label for="age">Age</label>
+  <input id="age" class="form-control" type="text" name="age" [formControl]="age">
+  <button (click)="getFormValues($event)"> Form Submit</button>
+</form>

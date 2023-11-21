@@ -6,10 +6,11 @@ import{WeatherDataService} from './weatherservice/weather-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DemoService } from './Demoservice/demo.service';
 import{SimpleformComponent} from './simpleform/simpleform.component';
+import{SignalsComponent} from './signals/signals.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,ProductListComponent,HttpClientModule,SimpleformComponent],
+  imports: [CommonModule, RouterOutlet,ProductListComponent,HttpClientModule,SimpleformComponent,SignalsComponent],
   providers: [WeatherDataService, DemoService],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

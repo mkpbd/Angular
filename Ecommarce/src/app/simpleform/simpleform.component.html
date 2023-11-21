@@ -5,5 +5,14 @@
   <input id="lastName" class="form-control" type="text" name="lastName" [formControl]="lastName">
   <label for="age">Age</label>
   <input id="age" class="form-control" type="text" name="age" [formControl]="age">
+
   <button (click)="getFormValues($event)"> Form Submit</button>
 </form>
+
+
+<form >
+    <label for="testModel">Test Model</label>
+<input id="testModel" type="text" name="testModel" [(ngModel)]="testModel"/>
+</form>
+
+<p>test - {{testModel}}</p>

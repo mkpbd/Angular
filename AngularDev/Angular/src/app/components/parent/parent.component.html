@@ -1,0 +1,10 @@
+<p>parent works!</p>
+
+<app-child [item] = "number" [ngStyle]="{'padding':'10px', 'border':'2px solid blue'}"></app-child>
+<br><br><br><br>
+<button (click)="updateChildCompnent($event)">change data in child component </button>
+
+
+<p>parent Components Data pass</p>
+
+<app-childto-parent-data-pass (itemDataEvent) = "dataPass"></app-childto-parent-data-pass>

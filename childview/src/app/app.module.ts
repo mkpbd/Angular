@@ -4,15 +4,17 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChildviewFirstelementComponent } from './childview-firstelement/childview-firstelement.component';
-
+import { ViewchildernComponent } from './viewchildern/viewchildern.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ChildviewFirstelementComponent
+    ChildviewFirstelementComponent,
+    ViewchildernComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+   
   ],
   providers: [
     provideClientHydration()

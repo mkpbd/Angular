@@ -10,6 +10,8 @@ export class CounterappComponent  {
 
     count  = signal<number>(0);
 
+    counter : number = 0;
+
     addNumber(){
       this.count.update(x => x + 1);
     }
@@ -20,4 +22,19 @@ export class CounterappComponent  {
     resetCount(){
       this.count.set(0);
     }
+
+
+    handelCountByclick(action : string){
+      if(action === 'add'){
+        this.counter++;
+      }
+      else if(action === 'minus'){
+        this.counter--;
+      }
+      else if(action === 'reset'){
+        this.counter = 0;
+      }
+    }
+
+
 }

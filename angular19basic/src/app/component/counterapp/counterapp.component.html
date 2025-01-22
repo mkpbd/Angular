@@ -1,8 +1,24 @@
-
+<h2>using Signal</h2>
 <button  (click)="addNumber()">Add  </button>
 
-<h3>{{count()}}</h3>
+<h3>Count - {{count()}}</h3>
 
 <button (click)="minusNumber()">minus</button>
 
 <button (click)="resetCount()">reset</button>
+
+
+
+
+<hr />
+
+<h4>Using normal property</h4>
+
+
+
+<h3>Count - {{counter}}</h3>
+
+<button (click)="handelCountByclick('add')">Add  </button>
+
+<button (click)="handelCountByclick('minus')()">minus</button>
+<button (click)="handelCountByclick('reset')()">reset</button>

@@ -14,5 +14,5 @@ import { signal } from '@angular/core';
   styles: [],
 })
 export class AppComponent {
-  titles = signal<string>('ecommarec cart');
+  titles = signal<string>('ecommarce cart');
 }
